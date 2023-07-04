@@ -21,7 +21,7 @@ export const meta: V2_MetaFunction = () => {
 
 export default function Index() {
   return (
-    <div>
+    <div className="bg-primary-black overflow-hidden">
       <Navbar />
       <Hero />
       <About />
