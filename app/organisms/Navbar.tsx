@@ -1,31 +1,9 @@
 import { motion } from "framer-motion";
 
 import styles from "~/styles";
+import { navVariants } from "~/utils/motion";
 
 const Navbar = () => {
-
-  // motion: top to bottom animation
-  const navVariants = {
-    hidden: {
-      opacity: 0,
-      y: -50,
-      transition: {
-        type: "spring",
-        stiffness: 300,
-        damping: 140,
-      },
-    },
-    show: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        type: "spring",
-        stiffness: 80,
-        delay: 1,
-      },
-    },
-  };
-
   return (
     <motion.nav
       variants={navVariants}

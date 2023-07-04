@@ -1,58 +1,8 @@
 import { motion } from "framer-motion";
 import styles from "~/styles";
+import { slideIn, staggerContainer, textVariant } from "~/utils/motion";
 
 const Hero = () => {
-  // motion:
-  const slideIn = (
-    direction: string,
-    type: string,
-    delay: number,
-    duration: number
-  ) => ({
-    hidden: {
-      x: direction === "left" ? "-100%" : direction === "right" ? "100%" : 0,
-      y: direction === "up" ? "100%" : direction === "down" ? "100%" : 0,
-    },
-    show: {
-      x: 0,
-      y: 0,
-      transition: {
-        type,
-        delay,
-        duration,
-        ease: "easeOut",
-      },
-    },
-  });
-
-  // requires args
-  const staggerContainer = (staggerChildren: number, delayChildren: number) => ({
-    hidden: {},
-    show: {
-      transition: {
-        staggerChildren,
-        delayChildren,
-      },
-    },
-  });
-
-  // motion: bottom to top animation
-  const textVariant = (delay: number) => ({
-    hidden: {
-      y: 50,
-      opacity: 0,
-    },
-    show: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        type: "spring",
-        duration: 1.25,
-        delay,
-      },
-    },
-  });
-
   return (
     <section className={`${styles.yPaddings} sm:pl-16 pl-6`}>
       <motion.div
@@ -82,11 +32,11 @@ const Hero = () => {
           className="relative w-full md:-mt-[20px] -mt-[12px]"
         >
           <div className="absolute w-full h-[300px] hero-gradient rounded-tl-[140px] z-[0] -top-[30px]" />
-            <img
-              src="/cover.png"
-              alt="cover"
-              className="w-full sm:h-[500px] h-[350px] object-cover rounded-tl-[140px] z-10 relative"
-            />
+          <img
+            src="/cover.png"
+            alt="cover"
+            className="w-full sm:h-[500px] h-[350px] object-cover rounded-tl-[140px] z-10 relative"
+          />
 
           <a href="#explore">
             <div className="w-full flex justify-end sm:-mt-[70px] -mt-[50px] pr-[40px] relative z-10">

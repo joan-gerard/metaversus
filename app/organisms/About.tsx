@@ -2,45 +2,9 @@ import { motion } from "framer-motion";
 
 import styles from "~/styles";
 import { TypingText } from "~/molecules/CustomText";
+import { fadeIn, staggerContainer } from "~/utils/motion";
 
 const About = () => {
-  const fadeIn = (
-    direction: string,
-    type: string,
-    delay: number,
-    duration: number
-  ) => ({
-    hidden: {
-      x: direction === "left" ? 100 : direction === "right" ? -100 : 0,
-      y: direction === "up" ? 100 : direction === "down" ? -100 : 0,
-      opacity: 0,
-    },
-    show: {
-      x: 0,
-      y: 0,
-      opacity: 1,
-      transition: {
-        type,
-        delay,
-        duration,
-        ease: "easeOut",
-      },
-    },
-  });
-
-  const staggerContainer = (
-    staggerChildren: number,
-    delayChildren: number
-  ) => ({
-    hidden: {},
-    show: {
-      transition: {
-        staggerChildren,
-        delayChildren,
-      },
-    },
-  });
-
   return (
     <section className={`${styles.paddings} relative z-10`}>
       <div className="gradient-02 z-0" />
