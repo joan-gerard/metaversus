@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import styles from "~/styles";
 
 const Navbar = () => {
+
+  // motion: top to bottom animation
   const navVariants = {
     hidden: {
       opacity: 0,
