@@ -7,7 +7,7 @@ import { getStartedInstructions } from "~/constants";
 
 const GetStarted = () => {
   return (
-    <section className={`${styles.paddings} relative z-10`}>
+    <section className={`${styles.paddings} relative z-10`} id="get-started">
       <motion.div
         variants={staggerContainer}
         initial="hidden"
