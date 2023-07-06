@@ -60,6 +60,21 @@ export const newFeatures = [
   },
 ];
 
+export const mapAvatars = [
+  {
+    imgUrl: "/people-01.png",
+    position: "bottom-10 right-10 lg:bottom-20 lg:right-20",
+  },
+  {
+    imgUrl: "/people-02.png",
+    position: "top-1/3 left-[42%] lg:top-1/2 lg:left-[45%]",
+  },
+  {
+    imgUrl: "/people-03.png",
+    position: "top-0 left-[5%] lg:top-10 lg:left-[22%]",
+  },
+];
+
 export const insights = [
   {
     imgUrl: "/planet-06.png",
