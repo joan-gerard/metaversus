@@ -16,10 +16,10 @@ function AvatarCard({
 }) {
   return (
     <motion.div
-      variants={fadeIn("down", "spring", idx * 0.5, 1)}
+      variants={fadeIn("down", "spring", idx * 0.6, 0.25)}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: false, amount: 0.5 }}
+      viewport={{ once: false, amount: 0.7 }}
       className={`${styles.avatarStyle} ${position}`}
     >
       <img src={imgUrl} alt="people" className="w-full h-full" />
