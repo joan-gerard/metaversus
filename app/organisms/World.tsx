@@ -16,7 +16,7 @@ function AvatarCard({
 }) {
   return (
     <motion.div
-      variants={fadeIn("down", "spring", idx * 0.6, 0.25)}
+      variants={fadeIn("down", "spring", idx * 0.4, 0.25)}
       initial="hidden"
       whileInView="show"
       viewport={{ once: false, amount: 0.7 }}
@@ -59,7 +59,7 @@ const World = () => {
           />
 
           {mapAvatars.map((avatar, idx) => (
-            <AvatarCard key={idx} idx={idx} {...avatar} />
+            <AvatarCard key={idx} idx={idx + 1} {...avatar} />
           ))}
           {/* <div className={`${styles.avatarStyle} ${styles.people01}`}>
             <img src="/people-01.png" alt="people" className="w-full h-full" />
